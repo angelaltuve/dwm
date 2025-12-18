@@ -3,7 +3,7 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
-#define BROWSER "librewolf"
+#define BROWSER "mullvad-browser"
 #define STATUSBAR "dwmblocks"
 
 /* appearance */
@@ -203,12 +203,12 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioPlay,          spawn,       SHCMD("mpc play") },
 	{ 0,                            XF86XK_AudioStop,          spawn,       SHCMD("mpc stop") },
   { 0,                            XF86XK_TouchpadToggle,     spawn,       SHCMD("touchpad_toggle") },
-  { MODKEY|ShiftMask,		          XK_n,                      spawn,       SHCMD(TERMINAL " -e newsraft")},
+  { MODKEY|ShiftMask,		          XK_n,                      spawn,       SHCMD(TERMINAL " -e newsboat")},
 	{ MODKEY,			                  XK_m,                      spawn,       SHCMD(TERMINAL " -e ncmpcpp") },
   { MODKEY|ShiftMask,             XK_w,                      spawn,       SHCMD(TERMINAL " -e nmtui; kill -38 $(pidof dwmblocks)")       },
   { MODKEY,			                  XK_e,                      spawn,       SHCMD(TERMINAL " -e neomutt; kill -46 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,			        XK_e,                      spawn,       SHCMD(TERMINAL " -e profanity") },
-  { MODKEY,			                  XK_r,                      spawn,       SHCMD(TERMINAL " -e tmux new-session -s yazi yazi") },
+  { MODKEY,			                  XK_r,                      spawn,       SHCMD(TERMINAL " -e lfub") },
   { MODKEY|ShiftMask,	XK_h,                                  spawn,       {.v = (const char*[]){ "st", "-e", "htop", NULL } } },
   { MODKEY,				                XK_v,                      spawn,       {.v = (const char*[]){ "cliphist", "sel", NULL } } },
 	{ MODKEY,				                XK_c,                      spawn,       {.v = (const char*[]){ "cliphist", "add", NULL } } },
@@ -230,7 +230,7 @@ static const Key keys[] = {
 	{ 0,				                    XK_Print,                  spawn,       SHCMD("maimpick") },
 	{ MODKEY,			                  XK_Print,                  spawn,       SHCMD("dmenurecord") },
 	{ MODKEY,			                  XK_Delete,                 spawn,       SHCMD("dmenurecord kill") },
-  { MODKEY,			                  XK_Insert,                 spawn,       SHCMD("bookmarks") },
+  { MODKEY,			                  XK_Insert,                 spawn,       SHCMD("buku-dmenu") },
   { MODKEY,			                  XK_p,                      spawn,       SHCMD("mpc toggle") },
 	{ MODKEY|ShiftMask,		          XK_p,                      spawn,       SHCMD("mpc pause; pauseallmpv") },
 	{ MODKEY,			                  XK_bracketleft,            spawn,       SHCMD("mpc seek -10") },
